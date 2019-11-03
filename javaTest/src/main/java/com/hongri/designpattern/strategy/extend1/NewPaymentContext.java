@@ -11,6 +11,13 @@ import com.hongri.designpattern.strategy.PaymentContext;
 public class NewPaymentContext extends PaymentContext {
     private String mAccount;
 
+    /**
+     * 构造方法，新增了一个账户(account)参数
+     * @param userName
+     * @param money
+     * @param account
+     * @param paymentStrategy
+     */
     public NewPaymentContext(String userName, double money, String account,
                              IPaymentStrategy paymentStrategy) {
         super(userName, money, paymentStrategy);
