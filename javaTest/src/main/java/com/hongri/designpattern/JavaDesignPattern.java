@@ -1,5 +1,8 @@
 package com.hongri.designpattern;
 
+import com.hongri.designpattern.producer_consumer.Consumer;
+import com.hongri.designpattern.producer_consumer.Producer;
+import com.hongri.designpattern.producer_consumer.SyncStack;
 import com.hongri.designpattern.strategy.extend1.CreditCardStrategy;
 import com.hongri.designpattern.strategy.DollarCashStrategy;
 import com.hongri.designpattern.strategy.IPaymentStrategy;
@@ -18,6 +21,15 @@ import com.hongri.designpattern.strategy.extend2.CreditCardStrategy2;
  */
 public class JavaDesignPattern {
     public static void main(String[] args) {
+
+        /**
+         * 生产者--消费者模型【不在23种设计模式之列】
+         */
+        SyncStack stack = new SyncStack();
+        Producer producer = new Producer(stack);
+        Consumer consumer = new Consumer(stack);
+        new Thread(producer).start();
+        new Thread(consumer).start();
 
         /**
          * 静态代理测试
@@ -76,22 +88,22 @@ public class JavaDesignPattern {
          * 策略模式测试一【】
          */
 
-        IPaymentStrategy rmbCashStrategy = new RMBCashStrategy();
-        PaymentContext paymentContext1 = new PaymentContext("张三", 6000.0, rmbCashStrategy);
-        paymentContext1.payNow();
-
-        IPaymentStrategy dollarCashStrategy = new DollarCashStrategy();
-        PaymentContext paymentContext2 = new PaymentContext("Jack", 8000.0, dollarCashStrategy);
-        paymentContext2.payNow();
-
-        IPaymentStrategy creditCardStrategy = new CreditCardStrategy();
-        NewPaymentContext newPaymentContext = new NewPaymentContext("王五", 9000.0, "8384894893",
-            creditCardStrategy);
-        newPaymentContext.payNow();
-
-        IPaymentStrategy creditCardStrategy2 = new CreditCardStrategy2("8384894893");
-        PaymentContext paymentContext3 = new PaymentContext("王五", 9000.0, creditCardStrategy2);
-        paymentContext3.payNow();
+//        IPaymentStrategy rmbCashStrategy = new RMBCashStrategy();
+//        PaymentContext paymentContext1 = new PaymentContext("张三", 6000.0, rmbCashStrategy);
+//        paymentContext1.payNow();
+//
+//        IPaymentStrategy dollarCashStrategy = new DollarCashStrategy();
+//        PaymentContext paymentContext2 = new PaymentContext("Jack", 8000.0, dollarCashStrategy);
+//        paymentContext2.payNow();
+//
+//        IPaymentStrategy creditCardStrategy = new CreditCardStrategy();
+//        NewPaymentContext newPaymentContext = new NewPaymentContext("王五", 9000.0, "8384894893",
+//            creditCardStrategy);
+//        newPaymentContext.payNow();
+//
+//        IPaymentStrategy creditCardStrategy2 = new CreditCardStrategy2("8384894893");
+//        PaymentContext paymentContext3 = new PaymentContext("王五", 9000.0, creditCardStrategy2);
+//        paymentContext3.payNow();
 
     }
 }

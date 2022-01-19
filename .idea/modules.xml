@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaDesignPattern.iml" filepath="$PROJECT_DIR$/JavaDesignPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaTest/javaTest.iml" filepath="$PROJECT_DIR$/javaTest/javaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaDesignPattern.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaDesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.iml" filepath="$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.iml" />
     </modules>
   </component>
 </project>
