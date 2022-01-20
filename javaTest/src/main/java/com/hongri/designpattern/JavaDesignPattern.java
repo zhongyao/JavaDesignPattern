@@ -1,15 +1,8 @@
 package com.hongri.designpattern;
 
-import com.hongri.designpattern.producer_consumer.Consumer;
-import com.hongri.designpattern.producer_consumer.Producer;
-import com.hongri.designpattern.producer_consumer.SyncStack;
-import com.hongri.designpattern.strategy.extend1.CreditCardStrategy;
-import com.hongri.designpattern.strategy.DollarCashStrategy;
-import com.hongri.designpattern.strategy.IPaymentStrategy;
-import com.hongri.designpattern.strategy.extend1.NewPaymentContext;
-import com.hongri.designpattern.strategy.PaymentContext;
-import com.hongri.designpattern.strategy.RMBCashStrategy;
-import com.hongri.designpattern.strategy.extend2.CreditCardStrategy2;
+import com.hongri.designpattern.adapter.Adaptee;
+import com.hongri.designpattern.adapter.Target;
+import com.hongri.designpattern.adapter.obj_adapter.Adapter;
 
 /**
  * @author hongri
@@ -23,13 +16,26 @@ public class JavaDesignPattern {
     public static void main(String[] args) {
 
         /**
+         * 适配器模式
+         */
+        //类适配器
+//        Target adapter = new Adapter();
+//        adapter.request();
+
+        //对象适配器
+        Adaptee adaptee = new Adaptee();
+        Target adapter = new Adapter(adaptee);
+        adapter.request();
+
+
+        /**
          * 生产者--消费者模型【不在23种设计模式之列】
          */
-        SyncStack stack = new SyncStack();
-        Producer producer = new Producer(stack);
-        Consumer consumer = new Consumer(stack);
-        new Thread(producer).start();
-        new Thread(consumer).start();
+//        SyncStack stack = new SyncStack();
+//        Producer producer = new Producer(stack);
+//        Consumer consumer = new Consumer(stack);
+//        new Thread(producer).start();
+//        new Thread(consumer).start();
 
         /**
          * 静态代理测试
