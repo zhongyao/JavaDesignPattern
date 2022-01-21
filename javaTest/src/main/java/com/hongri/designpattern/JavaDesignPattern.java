@@ -3,6 +3,8 @@ package com.hongri.designpattern;
 import com.hongri.designpattern.adapter.Adaptee;
 import com.hongri.designpattern.adapter.Target;
 import com.hongri.designpattern.adapter.obj_adapter.Adapter;
+import com.hongri.designpattern.template.ZhangSanFeng;
+import com.hongri.designpattern.template.ZhangWuJi;
 
 /**
  * @author hongri
@@ -16,6 +18,15 @@ public class JavaDesignPattern {
     public static void main(String[] args) {
 
         /**
+         * 模板方法模式
+         */
+        ZhangWuJi zhangWuJi = new ZhangWuJi();
+        zhangWuJi.fighting();
+
+        ZhangSanFeng zhangSanFeng = new ZhangSanFeng();
+        zhangSanFeng.fighting();
+
+        /**
          * 适配器模式
          */
         //类适配器
@@ -23,9 +34,9 @@ public class JavaDesignPattern {
 //        adapter.request();
 
         //对象适配器
-        Adaptee adaptee = new Adaptee();
-        Target adapter = new Adapter(adaptee);
-        adapter.request();
+//        Adaptee adaptee = new Adaptee();
+//        Target adapter = new Adapter(adaptee);
+//        adapter.request();
 
 
         /**
