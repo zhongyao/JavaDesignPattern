@@ -3,6 +3,10 @@ package com.hongri.designpattern;
 import com.hongri.designpattern.adapter.Adaptee;
 import com.hongri.designpattern.adapter.Target;
 import com.hongri.designpattern.adapter.obj_adapter.Adapter;
+import com.hongri.designpattern.create.Builder;
+import com.hongri.designpattern.create.Computer;
+import com.hongri.designpattern.create.ComputerBuilder;
+import com.hongri.designpattern.create.Director;
 import com.hongri.designpattern.template.ZhangSanFeng;
 import com.hongri.designpattern.template.ZhangWuJi;
 
@@ -16,15 +20,23 @@ import com.hongri.designpattern.template.ZhangWuJi;
  */
 public class JavaDesignPattern {
     public static void main(String[] args) {
+        /**
+         * 建造者模式
+         */
+        Builder builder = new ComputerBuilder();
+        Director director = new Director(builder);
+        //组装计算机
+        Computer computer = director.createComputer("Intel i7", "华硕", "kingston");
+        System.out.println("computer:" + computer);
 
         /**
          * 模板方法模式
          */
-        ZhangWuJi zhangWuJi = new ZhangWuJi();
-        zhangWuJi.fighting();
-
-        ZhangSanFeng zhangSanFeng = new ZhangSanFeng();
-        zhangSanFeng.fighting();
+//        ZhangWuJi zhangWuJi = new ZhangWuJi();
+//        zhangWuJi.fighting();
+//
+//        ZhangSanFeng zhangSanFeng = new ZhangSanFeng();
+//        zhangSanFeng.fighting();
 
         /**
          * 适配器模式
