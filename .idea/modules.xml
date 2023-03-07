@@ -4,7 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaDesignPattern.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaDesignPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JavaDesignPattern.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.iml" filepath="$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/javaTest/JavaDesignPattern.javaTest.test.iml" />
     </modules>
   </component>
 </project>

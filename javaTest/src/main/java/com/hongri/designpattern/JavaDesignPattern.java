@@ -7,6 +7,9 @@ import com.hongri.designpattern.create.Builder;
 import com.hongri.designpattern.create.Computer;
 import com.hongri.designpattern.create.ComputerBuilder;
 import com.hongri.designpattern.create.Director;
+import com.hongri.designpattern.producer_consumer.Consumer;
+import com.hongri.designpattern.producer_consumer.Producer;
+import com.hongri.designpattern.producer_consumer.SyncStack;
 import com.hongri.designpattern.template.ZhangSanFeng;
 import com.hongri.designpattern.template.ZhangWuJi;
 
@@ -23,11 +26,11 @@ public class JavaDesignPattern {
         /**
          * 建造者模式
          */
-        Builder builder = new ComputerBuilder();
-        Director director = new Director(builder);
-        //组装计算机
-        Computer computer = director.createComputer("Intel i7", "华硕", "kingston");
-        System.out.println("computer:" + computer);
+//        Builder builder = new ComputerBuilder();
+//        Director director = new Director(builder);
+//        //组装计算机
+//        Computer computer = director.createComputer("Intel i7", "华硕", "kingston");
+//        System.out.println("computer:" + computer);
 
         /**
          * 模板方法模式
@@ -54,11 +57,21 @@ public class JavaDesignPattern {
         /**
          * 生产者--消费者模型【不在23种设计模式之列】
          */
-//        SyncStack stack = new SyncStack();
-//        Producer producer = new Producer(stack);
-//        Consumer consumer = new Consumer(stack);
-//        new Thread(producer).start();
-//        new Thread(consumer).start();
+        SyncStack stack = new SyncStack();
+        Producer producer1 = new Producer("Producer1", stack);
+        Producer producer2 = new Producer("Producer2", stack);
+        Producer producer3 = new Producer("Producer3", stack);
+
+        Consumer consumer1 = new Consumer("Consumer1", stack);
+        Consumer consumer2 = new Consumer("Consumer2", stack);
+        Consumer consumer3 = new Consumer("Consumer3", stack);
+
+        new Thread(producer1).start();
+        new Thread(producer2).start();
+        new Thread(producer3).start();
+        new Thread(consumer1).start();
+        new Thread(consumer2).start();
+        new Thread(consumer3).start();
 
         /**
          * 静态代理测试
