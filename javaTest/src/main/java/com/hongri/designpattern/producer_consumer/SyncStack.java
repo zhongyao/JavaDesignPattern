@@ -27,7 +27,7 @@ public class SyncStack {
 
         //没有满，则继续produce
         System.out.println("生产者--" + producerName + "--生产了:" + value);
-        list.add(value++);
+        list.add(value);
         //唤醒其他所有处于wait()的线程，包括消费者和生产者
         notifyAll();
     }

@@ -1,17 +1,9 @@
 package com.hongri.designpattern;
 
-import com.hongri.designpattern.adapter.Adaptee;
-import com.hongri.designpattern.adapter.Target;
-import com.hongri.designpattern.adapter.obj_adapter.Adapter;
-import com.hongri.designpattern.create.Builder;
-import com.hongri.designpattern.create.Computer;
-import com.hongri.designpattern.create.ComputerBuilder;
-import com.hongri.designpattern.create.Director;
 import com.hongri.designpattern.producer_consumer.Consumer;
 import com.hongri.designpattern.producer_consumer.Producer;
 import com.hongri.designpattern.producer_consumer.SyncStack;
-import com.hongri.designpattern.template.ZhangSanFeng;
-import com.hongri.designpattern.template.ZhangWuJi;
+import com.hongri.designpattern.producer_consumer2.SyncStack2;
 
 /**
  * @author hongri
